@@ -14,16 +14,22 @@ const CounterList = () => {
 
   const handleIncrement = (id) => {
     const newCounters = [...counters];
-    newCounters.forEach((c) => {
+    newCounters.forEach((c) => { 
       if (c.id === id) {
         c.value += 1;
       }
     });
+     // лучеше тогда, но это вопрос производительности, и в нашем варианте не заметишь разницу 
+    const newCounters = counters.map((c) => { 
+      if (c.id === id) {
+        c.value += 1;
+      }
+  });
     setCounters(newCounters);
   };
 
   const handleDecrement = (id) => {
-    const newCounters = [...counters];
+    const newCounters = [...counters]; // тоже самое 
     newCounters.forEach((c) => {
       if (c.id === id) {
         c.value -= 1;
