@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Counter = (props) => {
-  // const [value, setValue] = useState(props.value);
+  // const [value, setValue] = useState(props.value); // вообще, по хорешему, в этом компоненте нужен стейт - это так, на будущее 
   const { value } = props;
 
   const formatValue = () => {
